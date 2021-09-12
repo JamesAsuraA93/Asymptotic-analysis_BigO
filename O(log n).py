@@ -6,10 +6,11 @@ def binary_search(lst, target, low, high):
     elif target < lst[mid]:
         # high = mid - 1
         return binary_search(lst, target, low, mid - 1)
-    else:
-        # target > lst[mid]:
+    elif target > lst[mid]:
         # low = mid + 1
         return binary_search(lst, target, mid - 1, high)
+    else:
+        return "Not found"
 
 
 lst_data = [1, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59]
